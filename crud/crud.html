@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" type="text/css" href="./crudstyle.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>Age</label>
+                        <input type="number" name="Age" id="Age">
+                    </div>
+                    <div class="Gender">
+                        <label>Gender:</label>
+                        <input type="radio" id="Male" name="Gender" class="Gender" value="Male">Male
+                        <input type="radio" id="Female" name="Gender" class="Gender" value="Female">Female
+                        
+                    </div>
+                    <br>
+                    <div>
+                        <label>Hobby:</label>
+
+                        <select name="Hobby" id="Hobby">
+                            <option value="">Choose</option>
+                            <option value="Cricket">Cricket</option>
+                            <option value="Driving">Driving</option>
+                            <option value="Dancing">Dancing</option>
+                            <option value="Singing">Singing</option>
+                            <option value="Reading">Reading</option>
+                          </select>      
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <div class="scrolllist">
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Hobby</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script src="./crudjs.js"></script>
+</body>
+
+</html>
