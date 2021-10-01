@@ -74,7 +74,7 @@ function onDelete(td) {
 
 const validatename = () => {
     //function for firstname validation
-    let letters = /^[a-zA-Z]+$/;
+    let letters = /^[a-zA-Z\s]+$/;
     const fname = document.getElementById("fullName").value;
     if (fname.match(letters) && fname != "" ) {
       document.getElementById("fullName").focus();
