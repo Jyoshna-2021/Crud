@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         Html CRUD with Pure JavaScript
     </title>
@@ -8,7 +11,8 @@
 </head>
 
 <body>
-    <table>
+    <table summary="Crud operation">
+        <th></th>
         <tr>
             <td>
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
@@ -24,7 +28,6 @@
                         <label>Gender:</label>
                         <input type="radio" id="Male" name="Gender" class="Gender" value="Male">Male
                         <input type="radio" id="Female" name="Gender" class="Gender" value="Female">Female
-                        
                     </div>
                     <br>
                     <div>
@@ -46,14 +49,14 @@
             </td>
             <td>
                 <div class="scrolllist">
-                <table class="list" id="employeeList">
+                <table class="list" id="employeeList" summary="Data">
                     <thead>
                         <tr>
-                            <th>Full Name</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Hobby</th>
-                            <th>Action</th>
+                            <th id="data">Full Name</th>
+                            <th id="data">Age</th>
+                            <th id="data">Gender</th>
+                            <th id="data">Hobby</th>
+                            <th id="data">Action</th>
                         </tr>
                     </thead>
                     <tbody>
