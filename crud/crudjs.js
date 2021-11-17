@@ -23,15 +23,15 @@ function readFormData() {
 function insertNewRecord(data) {
     var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
+    var cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.fullName;
-    cell2 = newRow.insertCell(1);
+    var cell2 = newRow.insertCell(1);
     cell2.innerHTML = data.Age;
-    cell3 = newRow.insertCell(2);
+    var cell3 = newRow.insertCell(2);
     cell3.innerHTML = data.Gender;
-    cell4 = newRow.insertCell(3);
+    var cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.Hobby;
-    cell5 = newRow.insertCell(4);
+    var cell5 = newRow.insertCell(4);
     cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
@@ -40,7 +40,7 @@ function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("Age").value = "";
     var Gender = document.getElementsByClassName("Gender");
-    for(index = 0; index<Gender.length; index++)
+    for(var index = 0; index<Gender.length; index++)
         Gender[index].checked = false;
     document.getElementById("Hobby").value = "";
     selectedRow = null;
@@ -80,7 +80,7 @@ const validatename = () => {
       document.getElementById("fullName").focus();
       return true;
     }
-    alert("Please enter valid first name");
+    alert("Please enter valid name");
     document.getElementById("fullName").focus();
     return false;
   }
@@ -98,5 +98,4 @@ const validatename = () => {
     document.getElementById("Age").focus();
     return false;
   }
- 
-  
+
