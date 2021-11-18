@@ -40,8 +40,8 @@ function resetForm() {
     document.getElementById("fullName").value = "";
     document.getElementById("Age").value = "";
     var Gender = document.getElementsByClassName("Gender");
-    for(var index = 0; index<Gender.length; index++)
-        Gender[index].checked = false;
+    for(let gen of Gender)
+       gen.checked = false;
     document.getElementById("Hobby").value = "";
     selectedRow = null;
 }
@@ -66,14 +66,14 @@ function updateRecord(formData) {
 
 function onDelete(td) {
     if (confirm('Are you sure to delete this record ?')) {
-        row = td.parentElement.parentElement;
+        let row = td.parentElement.parentElement;
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
     }
 }
 
 const validatename = () => {
-    //function for firstname validation
+   
     let letters = /^[a-zA-Z\s]+$/;
     const fname = document.getElementById("fullName").value;
     if (fname.match(letters) && fname != "" ) {
@@ -88,7 +88,7 @@ const validatename = () => {
     //function for age validation
   
     const year = document.getElementById("Age").value;
-    const formatage = /^[0-9]{1,2}$/;
+    const formatage = /^/d{1,2}$/;
     if (year.match(formatage)) {
       document.getElementById("Age").focus();
       return true;
