@@ -88,7 +88,7 @@ const validatename = () => {
     //function for age validation
   
     const year = document.getElementById("Age").value;
-    const formatage = /^/d{1,2}$/;
+    const formatage = /\d{2}$/;
     if (year.match(formatage)) {
       document.getElementById("Age").focus();
       return true;
